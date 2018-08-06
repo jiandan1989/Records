@@ -9,7 +9,7 @@
     "docs:build": "vuepress build docs",
     "start": "npm run docs:dev",
     "build": "npm run docs:build",
-    "deploy": "git status && git add . && git commit -m 'deploy'"
+    "push": "git status && git add . && git commit -m 'deploy' && git push"
   },
   "repository": {
     "type": "git",
