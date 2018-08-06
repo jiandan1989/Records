@@ -1,17 +1,24 @@
 module.exports = {
-
-  base: '/Records/', // 部署 Github
   // theme: 'vue',
   // dest: 'dist',
+  activeHeaderLinks: true, // 激活的标题链接
+  displayAllHeaders: false, // 显示所有页面的标题链接
+  // title: 'Learn Records',
+  description: 'learn Records',
+  head: ['link', {
+    rel: 'icon',
+    href: 'docs/.vuepress/public/logo.png',
+  }],
+  port: '3000', // 端口
+  host: '0.0.0.0',
+  base: '/Records/', // 部署 Github
   themeConfig: {
     // 假定 GitHub。也可以是一个完整的 GitLab URL。
     //  repo: 'vuejs/vuepress',
     // 自定义项目仓库链接文字
     // 默认根据 `themeConfig.repo` 中的 URL 来自动匹配是 "GitHub"/"GitLab"/"Bitbucket" 中的哪个，如果不设置时是 "Source"。
     //  repoLabel: '贡献代码！',
-
     // 以下为可选的 "Edit this page" 链接选项
-
     // 如果你的文档和项目位于不同仓库：
     //  docsRepo: 'vuejs/vuepress',
     // 如果你的文档不在仓库的根目录下：
@@ -24,7 +31,7 @@ module.exports = {
     // editLinkText: '帮助我们改进页面内容！',
     search: false, // 搜索框
     searchMaxSuggestions: 10, // 搜索框的提示数量
-    lastUpdated: 'Last Updated', // 最近更新 string boolean
+    lastUpdated: '最近更新', // 最近更新 string boolean
     // navbar: false, // 禁用特定的导航
     nav: [{
         text: 'Home',
@@ -60,22 +67,11 @@ module.exports = {
       },
       {
         text: '面试题',
-        items: [{
-          text: 'CSS',
-          link: '/Interview/CSS/'
-        }, ]
+        link: '/Interview/',
       },
       {
         text: '工具',
-        items: [{
-            text: 'Git',
-            link: '/tools/git/'
-          },
-          {
-            text: 'ZSH',
-            link: '/tools/zsh/'
-          },
-        ]
+        link: '/tools/',
       },
       {
         text: 'Github',
@@ -87,12 +83,8 @@ module.exports = {
     //   '/zh/React/', ['/zh/Vue/', 'Explicit link text']
     // ]
   },
-  activeHeaderLinks: true, // 激活的标题链接
-  displayAllHeaders: false, // 显示所有页面的标题链接
-  // title: 'Learn Records',
-  description: 'learn Records',
-  head: ['link', {
-    rel: 'icon',
-    href: `/public/Dollar.png`
-  }]
+  markdown: {
+    // anchor: 'NHF',
+    lineNumbers: true, // 显示行号
+  }
 }

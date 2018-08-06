@@ -1,207 +1,188 @@
-> 只用于学习不做其他任何用途
+---
+sidebar: auto
+---
 
-> [Git 官网]()
+::: tip
+只用于学习不做其他任何用途
 
-> [参考地址](https://dzone.com/articles/top-20-git-commands-with-examples)
+- [Git 官网]()
+- [参考地址](https://dzone.com/articles/top-20-git-commands-with-examples)
+  :::
 
-### 常用的 git 命令
+## git config
 
-- [git config](#config)
-
-- [git init](#init)
-
-- [git clone](#clone)
-
-- [git add](#add)
-
-- [git commit](#commit)
-
-- [git diff](#diff)
-
-- [git reset](#reset)
-
-- [git status](#status)
-
-- [git rm](#rm)
-
-- [git log](#log)
-
-- [git show](#show)
-
-- [git tag](#tag)
-
-- [git branch](#branch)
-
-- [git checkout](#checkout)
-
-- [git merge](#merge)
-
-- [git push](#push)
-
-- [git pull](#pull)
-
-- [git stash](#stash)
-
-- [git fetch](#fetch)
-
-#### config
-
-> 全局  配置 `git` 提交的  用户名以及邮箱
-
-```vim
+```bash
+# 用户名
 git config -global user.name "[name]"
-
+# 邮箱
 git config -global user.email "[email address]"
 ```
 
-#### init
+## git init
 
-> 创建一个新的 `git` 仓库
-
-```vim
+```bash
+# 创建一个新的 git 仓库
 git init [repository name]
 ```
 
-#### clone
+## git clone
 
-> 从远程仓库克隆到本地
-
-```vim
+```bash
+# 克隆远程仓库
 git clone [url]
 ```
 
-#### add
+## git add
 
-> 将文件提交到暂存区域
-
-```vim
+```bash
+# 提交指定文件到暂存区域
 git add [fileName]
 
-git add * # 将所有修改文件提交到暂存区域
+# 将所有修改文件提交到暂存区域
+git add *
 ```
 
-#### commit
+## git commit
 
 > 生成本地快照,版本历史记录
 
-```vim
+```bash
 git commit -m 'type in the commit message'
 
-git commit -a # 此命令使用 git add 命令提交添加的所有文件, 并提交自此以后更改的所有文件
+# 此命令使用 git add 命令提交添加的所有文件, 并提交自此以后更改的所有文件
+git commit -a
 ```
 
-#### diff
+## git diff
 
 > 查看当前修改文件与暂存区域文件的对比
 
-```vim
+```bash
 git diff
+# 查看最后一次版本的暂存区域文件对比
+git diff -staged
 
-git diff -staged # 查看最后一次版本的暂存区域文件对比
-
-git diff [first branch] [second branch] # 查看文件两个分支的差异
+# 查看文件两个分支的差异
+git diff [first branch] [second branch]
 ```
 
-#### reset
+## git reset
 
-```vim
-git reset [file] # 取消暂存文件, 但保留文件内容
+```bash
+# 取消暂存文件, 但保留文件内容
+git reset [file]
 
-git reset [commit] # c核销提交后的所有提交记录
+# 撤销提交后的所有提交记录
+git reset [commit]
 
-git reset -hard [commit] # 丢弃所有历史记录 并回退至指定版本
+# 丢弃所有历史记录 并回退至指定版本
+git reset -hard [commit]
 ```
 
-#### status
+## git status
 
-```vim
-git status # 查看所有修改文件
+```bash
+ # 查看所有修改文件
+git status
 ```
 
-#### rm
+## git rm
 
-```vim
-git rm [file] # 从工作目录中删除该文件的 git 记录
+```bash
+ # 从工作目录中删除该文件的 git 记录
+git rm [file]
 ```
 
-#### log
+## git log
 
-```vim
-git log # 列出当前分支的版本历史记录
-
-git log -follow[file] # 列出文件的历史记录 包括重命名
+```bash
+ # 列出当前分支的版本历史记录
+git log
+# 列出文件的历史记录 包括重命名
+git log -follow[file]
 ```
 
-#### show
+## git show
 
-```vim
-git show [commit] # 显示指定提交的元数据和内容更改
+```bash
+# 显示指定提交的元数据和内容更改
+git show [commit]
 ```
 
-#### tag
+## git tag
 
-```vim
-git tag [commit ID] # 指定的提交提供标记,就是所谓的版本
+```bash
+ # 指定的提交提供标记,就是所谓的版本
+git tag [commit ID]
 ```
 
-#### branch
+## git branch
 
-```vim
-git branch # 列出所有本地的分支
+```bash
+# 列出所有本地的分支
+git branch
 
-git branch [branch name] # 创建一个本地分支
+# 创建一个本地分支
+git branch [branch name]
 
-git branch - d [branch name] # 删除本地分支
+# 删除本地分支
+git branch - d [branch name]
 
-git branch -D [branch name] # 强制删除本地分支
+# 强制删除本地分支
+git branch -D [branch name]
 
-git branch -a # 列出所有远程分支
+# 列出所有远程分支
+git branch -a
 ```
 
-#### checkout
+## git checkout
 
-```vim
-git checkout [branch name] # 切换分支
+```bash
+# 切换分支
+git checkout [branch name]
 
-git checkout -b [branch name] # 创建一个本地分支并切换
+# 创建一个本地分支并切换
+git checkout -b [branch name]
 ```
 
-#### merge
+## git merge
 
-```vim
-git merge [branch name] # 将指定分支的提交记录合并到当前分支
+```bash
+# 将指定分支的提交记录合并到当前分支
+git merge [branch name]
 ```
 
-#### remote
+## git push
 
-```vim
-git remote add [variable name] [Remote server link ] # 将本地分支推送到远程服务
+```bash
+# 将 master分支的提交推送到远程存储库
+git push [variable name] master
+
+# 将本地分支推送到远程存储库
+git push [variable name] branch
+
+# 推送所有本地分支到远程存储库
+git push -all [variable name]
+
+# 删除远程分支
+git push [variable name] :[branch name]
 ```
 
-#### push
+## git pull
 
-```vim
-git push [variable name] master # 将 master分支的提交推送到远程存储库
+```bash
+# 将远程分支的记录合并到本地, 拉取代码
+git pull [repository link]
 
-git push [variable name] branch # 将本地分支推送到远程存储库
-
-git push -all [variable name] # 推送所有本地分支到远程存储库
-
-git push [variable name] :[branch name] # 删除远程分支
+# 将远程指定分支的代码更新至本地当前分支
+git pull origin [branch name]
 ```
 
-#### pull
+## git stash
 
-```vim
-git pull [repository link] # 将远程分支的记录合并到本地, 拉取代码
-
-git pull origin [branch name] # 将远程指定分支的代码更新至本地当前分支
-```
-
-#### stash
-
-```vim
-git stash save # 临时存储所有已修改的跟踪文件
+```bash
+# 临时存储所有已修改的跟踪文件
+git stash save
 
 git stash pop # 恢复最近隐藏的文件
 
@@ -210,8 +191,16 @@ git stash list # 列出所有存储的更改
 git stash drop # 丢弃最近隐藏的变更集
 ```
 
-#### fetch
+## git fetch
 
-```vim
-git fetch # 获取远程新创建分支
+```bash
+# 获取远程新创建分支
+git fetch
+```
+
+## git remote
+
+```bash
+# 将本地分支推送到远程服务
+git remote add [variable name] [Remote server link ]
 ```

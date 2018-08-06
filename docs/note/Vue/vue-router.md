@@ -1,16 +1,24 @@
-### 安装
+---
+sidebar: auto
+---
 
-```javascript
+# vue-router
+
+## 安装
+
+```vim
+# npm
 npm install --save vue-router
 
+# yarn
 yarn add vue-router
 ```
 
-### 使用介绍
+## 使用介绍
 
-- 创建实例
+### 创建实例
 
-```javascript
+```js
 import VueRouter from 'vue-router';
 
 const router = new VueRouter({
