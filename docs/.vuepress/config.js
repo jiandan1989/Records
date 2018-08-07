@@ -61,6 +61,9 @@ module.exports = {
             {
               text: 'Vue',
               link: '/note/Vue/'
+            }, {
+              text: 'NodeJs',
+              link: '/note/node/'
             }
           ]
         }]
