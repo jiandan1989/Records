@@ -1,7 +1,7 @@
 /**
  * @TODO:
- * 1. 添加高亮
- * 2. 格式化输出
+ * 1. 添加高亮, highlight.js
+ * 2. 格式化输出, js-beautify, uglify-js
  * 3. 编码乱码
  */
 

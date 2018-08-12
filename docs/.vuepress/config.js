@@ -77,6 +77,10 @@ module.exports = {
         link: '/tools/',
       },
       {
+        text: '插件',
+        link: '/plugins/',
+      },
+      {
         text: 'Github',
         link: 'https://github.com/'
       },
