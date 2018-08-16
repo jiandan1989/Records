@@ -66,6 +66,9 @@ module.exports = {
               link: '/note/node/'
             }
           ]
+        }, {
+          text: '网站',
+          link: '/note/website/',
         }]
       },
       {
