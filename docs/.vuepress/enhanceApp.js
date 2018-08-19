@@ -1,3 +1,9 @@
+import Vue from 'vue';
+import 'element-ui/lib/theme-chalk/index.css';
+import Element from 'element-ui';
+
+Vue.use(Element, { size: 'small' });
+
 export default ({
   Vue, // 当前 VuePress 应用所使用的 Vue 版本
   options, // 根 Vue 实例的选项

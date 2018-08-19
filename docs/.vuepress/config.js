@@ -1,3 +1,5 @@
+
+
 module.exports = {
   // theme: 'vue',
   // dest: 'dist',
@@ -78,10 +80,6 @@ module.exports = {
       {
         text: '工具',
         link: '/tools/',
-      },
-      {
-        text: '插件',
-        link: '/plugins/',
       },
       {
         text: 'Github',
