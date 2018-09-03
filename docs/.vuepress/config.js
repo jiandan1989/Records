@@ -49,6 +49,9 @@ module.exports = {
           }, {
             text: 'HTML5 API',
             link: '/note/HTML5/'
+          }, {
+            text: 'CSS',
+            link: '/note/css/'
           }]
         }, {
           text: '框架',

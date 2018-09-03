@@ -1,11 +1,14 @@
 <template>
   <el-button>
-    {{ msg }}
+    {{ list }}
   </el-button>
 </template>
 <script>
 export default {
   name: 'OtherComponent',
+  props: [
+    'list',
+  ],
   data() {
     return {
       msg: 'demo'
@@ -14,7 +17,7 @@ export default {
 };
 </script>
 
-<style lang="stylus">
+<style lang="scss">
 .demo {
   font-size: 100px;
   color: red;
