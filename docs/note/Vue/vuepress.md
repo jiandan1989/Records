@@ -13,3 +13,6 @@ sidebar: auto
 > 基础配置 .vuepress/config.js
 
 <<< @/docs/.vuepress/config.js
+
+
+<i-back-top></i-back-top>

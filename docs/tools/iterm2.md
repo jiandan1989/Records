@@ -290,3 +290,5 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=10"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 ```
+
+<i-back-top></i-back-top>

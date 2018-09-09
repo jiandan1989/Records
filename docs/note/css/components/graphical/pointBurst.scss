@@ -1,0 +1,33 @@
+#pointBurst {
+  background: red;
+  margin: 30px auto;
+  width: 80px;
+  height: 80px;
+  position: relative;
+  text-align: center;
+}
+
+#pointBurst:before,
+#pointBurst:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 80px;
+  width: 80px;
+  background: red;
+}
+
+#pointBurst:before {
+  -webkit-transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  -o-transform: rotate(30deg);
+}
+
+#pointBurst:after {
+  -webkit-transform: rotate(60deg);
+  -moz-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  -o-transform: rotate(60deg);
+}

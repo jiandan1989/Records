@@ -90,3 +90,5 @@ export default class CounterButton extends Component {
 ::: tip
  什么时候不应该使用 `.bind(this)`, 如果 this 未在处理程序中使用, 则不需要绑定事件处理程序 this, 应该放在一个 util 文件中
 :::
+
+<i-back-top></i-back-top>

@@ -37,3 +37,6 @@
 - postcss.config.js: postcss 配置信息
 
 - webpack.config.js: 打包配置信息
+
+
+<i-back-top></i-back-top>

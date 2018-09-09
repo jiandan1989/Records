@@ -1,0 +1,10 @@
+#oval {
+  width: 200px;
+  height: 100px;
+  background: red;
+  -moz-border-radius: 100px / 50px;
+  -webkit-border-radius: 100px / 50px;
+  border-radius: 100px / 50px;
+}
+
+/* 可以使用百分比值(大于50%)，但是低版本的Android不支持 */

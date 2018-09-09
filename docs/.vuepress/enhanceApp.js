@@ -1,8 +1,43 @@
 import Vue from 'vue';
 import 'element-ui/lib/theme-chalk/index.css';
-import Element from 'element-ui';
+import 'iview/dist/styles/iview.css';
 
-Vue.use(Element, { size: 'small' });
+// import Element from 'element-ui';
+// import iView from 'iview';
+
+// element ui
+import {
+  Row as ElRow,
+  Col as ElCol,
+  Collapse as ElCollapse,
+  CollapseItem as ElCollapseItem,
+  Tag as ElTag,
+  Tabs as ElTabs,
+  TabPane as ElTabPane
+} from 'element-ui';
+
+// iview ui
+import {
+  Input as ivInput,
+  Drawer as ivDrawer,
+  Button as ivButton,
+  BackTop as ivBackTop
+} from 'iview';
+
+// Vue.use(Element, { size: 'small' });
+
+Vue.component('i-input', ivInput);
+Vue.component('i-back-top', ivBackTop);
+Vue.component('i-drawer', ivDrawer);
+Vue.component('i-button', ivButton);
+/******************************* */
+Vue.component('el-tag', ElTag);
+Vue.component('el-tabs', ElTabs);
+Vue.component('el-tab-pane', ElTabPane);
+Vue.component('el-row', ElRow);
+Vue.component('el-col', ElCol);
+Vue.component('el-collapse', ElCollapse);
+Vue.component('el-collapse-item', ElCollapseItem);
 
 export default ({
   Vue, // 当前 VuePress 应用所使用的 Vue 版本

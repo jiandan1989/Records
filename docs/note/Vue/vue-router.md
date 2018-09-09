@@ -116,3 +116,5 @@ const router = new VueRouter({
 
 - 插件 `syntax-dynamic-import`
 - 安装 `npm install --save-dev babel-plugin-syntax-dynamic-import`
+
+<i-back-top></i-back-top>

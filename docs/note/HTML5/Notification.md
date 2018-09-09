@@ -69,3 +69,5 @@ function notifyMe() {
 ```
 
 - 最后 出于尊重,如果用户已经授权接收通知信息,就不要再打扰
+
+<i-back-top></i-back-top>
