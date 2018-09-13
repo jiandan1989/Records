@@ -1,0 +1,77 @@
+
+html, body, #app, .css-page, .custom-page {
+  height: 100%;
+}
+
+#app {
+  margin-top: -18px;
+}
+
+.custom-page {
+  padding: 0;
+
+  .content {
+    padding: 0;
+  }
+}
+
+.css-page {
+  background-image: linear-gradient(90deg, rgba(254, 172, 94, 0.9), rgba(199, 121, 208, 0.9), rgba(75, 100, 200, 0.9));
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+ul,
+li {
+  list-style-type: none
+}
+
+h2 {
+  font-size: 16px;
+}
+
+h3 {
+  font-size: 16px;
+  padding-bottom: 1rem;
+}
+
+h4 {
+  font-size: 12px;
+}
+
+p {
+  font-size: 0.8rem;
+}
+
+a {
+  font-size: 0.9rem;
+}
+
+blockquote {
+  margin-top: .5rem;
+  border-width: 0.1rem;
+  padding-left: .3rem;
+  text-indent: .7rem;
+}
+
+.custom-block {
+
+  &.tip {
+    padding-left: 0.2rem;
+
+    border-left-width: 0.2rem;
+    border-left-color: #663399;
+  }
+
+  p {
+    &:not(.custom-block-title) {
+      padding-left: 1rem;
+    }
+  }
+
+  p.custom-block-title {
+    margin-top: 0;
+    padding-bottom: 1rem;
+  }
+}

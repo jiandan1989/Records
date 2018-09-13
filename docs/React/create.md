@@ -6,11 +6,12 @@ sidebar: auto
 
 - [原文链接](https://www.cnblogs.com/wonyun/p/5930333.html)
 
-## 无状态组件
 
 ::: tip
 纯展示组件,只负责渲染从 props 传递的值,不涉及到`state`状态的操作
 :::
+
+## 无状态组件
 
 ```js
 // ES6 箭头语法

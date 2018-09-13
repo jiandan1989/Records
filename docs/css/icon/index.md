@@ -1,17 +1,13 @@
-<animated-icon></animated-icon>
 <template>
-<i-button @click="showDrawer">查看源码</i-button>
+<i-button type="primary" @click="showDrawer">查看源码</i-button>
 </template>
+<animated-icon></animated-icon>
 
 <i-drawer
   title="源码查看"
   width="80%"
   v-model="showSource">
-<el-collapse v-model="activeKey">
-  <el-collapse-item title="查看scss" name="source">
-  <<< @/docs/.vuepress/components/AnimatedIcon.scss
-  </el-collapse-item>
-</el-collapse>
+<<< @/docs/.vuepress/components/AnimatedIcon.scss
 </i-drawer>
 
 <script>
@@ -24,7 +20,6 @@ export default {
   },
   data() {
     return {
-      activeKey: 'source',
       showSource: false
     }
   }
