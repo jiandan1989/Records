@@ -1,4 +1,3 @@
-
 ## User-Agent
 
 - [platform.js](https://github.com/bestiejs/platform.js)
@@ -40,7 +39,7 @@
 - [mkdirp](https://github.com/substack/node-mkdirp)
 - [rimraf](https://github.com/isaacs/rimraf)
 - [memwatch](https://github.com/lloyd/node-memwatch) 【内存监控】
-- [current-processes](https://github.com/branneman/current-processes) 【检查内存占用】
+- [current-processes](https://github.com/branneman/current-processes) 【 检查内存占用】
 - [compute-cluster](https://github.com/lloyd/node-compute-cluster) 【开启子进程】
 
 ## Tool
@@ -48,7 +47,7 @@
 - [cross-env](https://github.com/kentcdodds/cross-env)
 - [cpx](https://github.com/mysticatea/cpx)
 - [doctoc](https://github.com/thlorenz/doctoc)
-  一个 Node.js 组件，为你的Markdown文件自动化添加目录。你看见的本文的目录就是由doctoc添加的
+  一个 Node.js 组件，为你的 Markdown 文件自动化添加目录。你看见的本文的目录就是由 doctoc 添加的
 
 - [bcrypt](https://github.com/kelektiv/node.bcrypt.js)
 - [xss](https://github.com/leizongmin/js-xss)
@@ -104,8 +103,8 @@
 
 文章
 
-- [node消息队列](https://mp.weixin.qq.com/s?__biz=MzAxMTU0NTc4Nw==&mid=222389072&idx=1&sn=c0baf99bda2c74aa8b4fd0e2a2b14096#rd)
-- [从Redis谈起（三）—— Redis和消息中间件](https://mp.weixin.qq.com/s?__biz=MzAxMjgyMTY1NA==&mid=401601934&idx=1&sn=f87768708cdfe54fb6c302f203f3af44#rd)
+- [node 消息队列](https://mp.weixin.qq.com/s?__biz=MzAxMTU0NTc4Nw==&mid=222389072&idx=1&sn=c0baf99bda2c74aa8b4fd0e2a2b14096#rd)
+- [从 Redis 谈起（三）—— Redis 和消息中间件](https://mp.weixin.qq.com/s?__biz=MzAxMjgyMTY1NA==&mid=401601934&idx=1&sn=f87768708cdfe54fb6c302f203f3af44#rd)
 
 ## 爬虫
 
@@ -166,8 +165,9 @@
 ## Others
 
 - [phantomjs-node](https://github.com/amir20/phantomjs-node)
+
   - [How to evaluate a page using awaitFor to load dynamic contents](https://github.com/amir20/phantomjs-node/issues/431)
-  如果有类似 `waitFor` 的需求，即保持阻塞直到触发某种条件，一般是用来通过检查某个 DOM 是否存在，来判断页面是否加载完成，以便进行下一步的操作（比如截图）。可以通过上面的 issue 来实现这样的需求。
+    如果有类似 `waitFor` 的需求，即保持阻塞直到触发某种条件，一般是用来通过检查某个 DOM 是否存在，来判断页面是否加载完成，以便进行下一步的操作（比如截图）。可以通过上面的 issue 来实现这样的需求。
 
 - [jsinspect](https://github.com/danielstjules/jsinspect) 【检查代码中的重复代码，虽然不是非常精准，但对优化代码也有一定帮助。】
 - [nodemailer](https://github.com/nodemailer/nodemailer) 【Node.js 发送邮件】

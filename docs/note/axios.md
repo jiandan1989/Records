@@ -278,14 +278,21 @@ const instance = axios.create({
 
   // statusText: HTTP状态信息
   statusText: 'OK',
-  
+
   // headers: 服务器响应的头
   headers: {},
 
   // config: 为请求提供的配置信息
   config: {}
 }
+```
 
+### 默认配置
+
+```js
+axios.defaults.baseURL = 'baseURL';
+axios.defaults.headers.common('Authorization') = AUTH_TOKEN;
+axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
 ```
 
 ### 自定义拦截
@@ -296,7 +303,6 @@ const instance = axios.create({
 > 根据返回信息中的 code ,做判断处理, 示例中使用的 code: 600 即为处理成功
 
 ```js
-
 import axios from 'axios';
 import { Message } from 'element-ui';
 
@@ -309,64 +315,69 @@ axios.defaults.timeout = msgDuration; // 默认 5s 超时
 const axiosService = axios.create();
 
 // 设置 request
-axiosService.interceptors.request.use(function (config) {
-  config.headers.dt = Date.now();
-  const token = getToken('ttt');
-  if (token) {
-    config.headers = Object.assign(config.headers, { token });
+axiosService.interceptors.request.use(
+  function(config) {
+    config.headers.dt = Date.now();
+    const token = getToken('ttt');
+    if (token) {
+      config.headers = Object.assign(config.headers, { token });
+    }
+    config.validateStatus = function(status) {
+      return status >= 200 && status < 300;
+    };
+    return config;
+  },
+  function(error) {
+    return Promise.reject(error);
   }
-  config.validateStatus = function (status) {
-    return status >= 200 && status < 300;
-  }
-  return config;
-}, function (error) {
-  return Promise.reject(error);
-});
+);
 
 // 统一设置请求返回值
-axiosService.interceptors.response.use((response) => {
-  if (response.status === 401) {
-    clearLocal();
-    return Promise.reject(new Error('请重新登录'));
-  }
-  if (response.status !== 200) {
+axiosService.interceptors.response.use(
+  response => {
+    if (response.status === 401) {
+      clearLocal();
+      return Promise.reject(new Error('请重新登录'));
+    }
+    if (response.status !== 200) {
+      showErrorMsg('未知错误，请重试');
+      return Promise.reject(new Error('未知错误，请重试'));
+    }
+    if (!response.data.success) {
+      showErrorMsg('请求失败');
+      return Promise.reject(new Error('请求失败'));
+    }
+    const { data } = response;
+    if (data.code !== 600) {
+      const errorMsg = data.msg || '请求失败!';
+      showErrorMsg(errorMsg);
+      return Promise.reject(new Error(errorMsg));
+    }
+    if (data.data && data.data.token) {
+      setToken(data.data.token);
+    }
+    return data.data;
+  },
+  error => {
+    if (error.response && error.response.status === 401) {
+      showErrorMsg('未登录, 请重新登录!');
+      setTimeout(() => {
+        window.location.href = '/';
+      }, 3000);
+      return Promise.error(error.response);
+    }
     showErrorMsg('未知错误，请重试');
-    return Promise.reject(new Error('未知错误，请重试'));
+    return Promise.reject(error);
   }
-  if (!response.data.success) {
-    showErrorMsg('请求失败');
-    return Promise.reject(new Error('请求失败'));
-  }
-  const { data } = response;
-  if (data.code !== 600) {
-    const errorMsg = data.msg || '请求失败!';
-    showErrorMsg(errorMsg);
-    return Promise.reject(new Error(errorMsg));
-  }
-  if (data.data && data.data.token) {
-    setToken(data.data.token);
-  }
-  return data.data;
-}, (error) => {
-  if (error.response && error.response.status === 401) {
-    showErrorMsg('未登录, 请重新登录!');
-    setTimeout(() => {
-      window.location.href = '/';
-    }, 3000);
-    return Promise.error(error.response);
-  }
-  showErrorMsg('未知错误，请重试');
-  return Promise.reject(error);
-});
+);
 
-export const showErrorMsg = message => Message({
-  type: 'error',
-  message,
-  duration: msgDuration
-});
+export const showErrorMsg = message =>
+  Message({
+    type: 'error',
+    message,
+    duration: msgDuration
+  });
 export const request = axiosService;
-
-
 ```
 
 <i-back-top></i-back-top>
