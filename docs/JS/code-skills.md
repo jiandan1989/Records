@@ -3,12 +3,12 @@ sidebar: auto
 ---
 
 ::: tip
-本文主要来自于 微信公众号: [前端大全](微信号: FrontDev)
+以下主要来自于 微信公众号: [前端大全](微信号: FrontDev)
 
-- [地址1](https://segmentfault.com/a/1190000011557368)
-- [地址2](https://www.zhihu.com/question/46943112)
-- [地址3](https://github.com/jawil/blog/issues/24)
-:::
+- [地址 1](https://segmentfault.com/a/1190000011557368)
+- [地址 2](https://www.zhihu.com/question/46943112)
+- [地址 3](https://github.com/jawil/blog/issues/24)
+  :::
 
 ## 常用代码
 
@@ -100,7 +100,7 @@ Array.prototype.slice.call(arguments);
 
 // ES6
 Array.from(arguments);
-[...arguments]
+[...arguments];
 // 现使用 ...rest 代替arguments
 ```
 
@@ -108,16 +108,16 @@ Array.from(arguments);
 
 ```js
 // 指定时间的时间戳
-new Date().getTime()
-(new Date()).getTime();
-(new Date).getTime()
+new Date()
+  .getTime()(new Date())
+  .getTime();
+new Date().getTime();
 
 // 获取当前的时间戳
 
 Date.now();
 // 日期显示转化为数字
 +new Date();
-
 ```
 
 ---
@@ -137,16 +137,16 @@ export const humpToUnderline = str =>
 ### 最短代码实现数组去重
 
 ```js
-[...new Set(arr)]
+[...new Set(arr)];
 ```
+
 ### 实现长度 m 且值都为 n 的数组
 
 ```js
-Array(m).fill(n)
+Array(m).fill(n);
 ```
 
 ### URL 查询参数转 JSON 格式
-
 
 ```js
 // ES6
@@ -207,7 +207,26 @@ export const getInfo = str =>
   str.split('').reduce((p, k) => (p[k]++ || (p[k] = 1), p), {});
 ```
 
-##
+### 判断浏览器
 
+```js
+const UA = navigator.userAgent; // UA
+const APP_VERSION = navigator.appVersion; // 版本
+const isWebKit = UA.indexOf('AppleWebKit') > -1;
+const isPresto = UA.indexOf('Presto') > -1;
+const isTrident = UA.indexOf('Trident') > -1;
+const isGecko = UA.indexOf('Gecko') > -1 && UA.indexOf('KHTML') == -1;
+const isTrident = UA.indexOf('Trident') > -1;
+const isMobile =
+  !!UA.match(/AppleWebKit.*Mobile/i) ||
+  !!UA.match(
+    /MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/
+  );
+const isIos = !!UA.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+const isAndroid = UA.indexOf('Android') > -1 || UA.indexOf('Linux') > -1;
+const isIPhone = UA.indexOf('iPhone') > -1 || UA.indexOf('Mac') > -1;
+const isIPad = UA.indexOf('iPad') > -1;
+const isWebApp = UA.indexOf('Safari') == -1;
+```
 
 <i-back-top></i-back-top>

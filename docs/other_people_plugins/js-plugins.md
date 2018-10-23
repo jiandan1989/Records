@@ -28,6 +28,10 @@ JS 插件
 > 各种样式的 loading
 
 - [choreographer-js](https://github.com/christinecha/choreographer-js): A simple library to take care of complex CSS animations.
+- [ajaxload](http://www.ajaxload.info/)
+
+- [loadingapng](http://loadingapng.com/)
+- [loadinggif](http://www.loadinggif.com/)
 
 - [typed.js](https://github.com/mattboldt/typed.js/): 模拟打字效果，需要 jQuery 依赖
 

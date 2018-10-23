@@ -55,10 +55,9 @@ sidebar: auto
 
 ### 博客
 
-- [The Morning Paper](https://blog.acolyer.org/):日更，这个博客是一个原本什么都不懂的 VC 开的，初心是想开始积累自己在 ML 领域的认知，资讯的选取更多是从投资者的角度出发。
-- [HackerNews](https://news.ycombinator.com/news):硅谷技术圈和投资圈都会关注的新闻网站，资讯不仅和 AI 有关，还会涉及到创业和信息安全，需要自己筛选。
-- [Reddit](https://www.reddit.com): 这是一个超有趣的网站，拿来压轴哈哈。厌烦豆瓣贴吧了吧？你可以来这里看看，看看米国人
-  民的幽默无节操段子。很多微博段子都是从这里抄来的。前几天英国报姐就分享过一则从 reddit 摘来的关于喵喜欢睡在铲屎官脑袋上的段子。
+- [The Morning Paper](https://blog.acolyer.org/)
+- [HackerNews](https://news.ycombinator.com/news)
+- [Reddit](https://www.reddit.com)
 - [博客园](https://www.cnblogs.com/)
 - [开源中国](https://www.oschina.net/)
 - [SegmentFault](https://segmentfault.com/)
@@ -82,7 +81,7 @@ sidebar: auto
 ### AI
 
 - [Apple](https://machinelearning.apple.com/)
-- [Inside AI](https://inside.com/ai):Inside 网站旗下的 AI 话题板块，专注于资讯的深度。现在大多数新闻都是为了流量，吸引读者的眼球，而很少考虑读者的收获，导致优质新闻的产出和占道越来越少，很难到达渴望深度内容的读者。所以，Inside AI 希望经过他们的筛选，订阅用户能重新获取有价值的新闻资讯。
+- [Inside AI](https://inside.com/ai):
 - [machine_learning](https://www.reddit.com/user/techrat_reddit/m/machine_learning/)
 - [MachineLearning](https://www.reddit.com/r/MachineLearning/)
 - [computervision](https://www.reddit.com/r/computervision/)
@@ -226,9 +225,19 @@ sidebar: auto
 - [设计师网站导航](http://hao.uisdc.com/) 最全面最丰富的设计学习网站
 - [泡面吧](http://123.paomianba.com/): 在线教育导航第一品牌
 
+## 占位图
+
+- [dummyimage](http://dummyimage.com/)
+- [placeholder](http://placeholder.cn/)
+- [placehold](http://placehold.it/)
+- [lorempixel](http://lorempixel.com/)
+- [fakeimg](http://fakeimg.pl/)
+
 ## 配色
 
 - [uigradients](https://uigradients.com/)
+- [coolhue](https://webkul.github.io/coolhue)
+- [webgradients](https://webgradients.com)
 - [Adobe color cc](https://color.adobe.com/)Aobe 旗下的配色网站，你可以在线配色，选择配色方案。不论是摄影还是设计，你都需要对颜色有足够的了解。
 - [配色网](peise.net)
 - [中国色](zhongguose.com)
