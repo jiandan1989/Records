@@ -22,6 +22,8 @@ import {
 
 // iview ui
 import {
+  Tabs as ivTabs,
+  TabPane as ivTabPane,
   Input as ivInput,
   Drawer as ivDrawer,
   Button as ivButton,
@@ -40,7 +42,8 @@ import {
 } from 'iview';
 // Vue.use(Element, { size: 'small' });
 
-// Vue.component('i-table', ivTable);
+Vue.component('i-tabs', ivTabs);
+Vue.component('i-tab-pane', ivTabPane);
 Vue.component('i-divider', ivDivider);
 Vue.component('i-card', ivCard);
 Vue.component('i-layout', ivLayout);

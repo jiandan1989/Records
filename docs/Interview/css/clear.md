@@ -11,6 +11,7 @@
   clear: both;
 }
 ```
+
 - 父级元素添加固定高度
 
 ```css
@@ -26,5 +27,3 @@
   overflow: hidden;
 }
 ```
-
-<i-back-top></i-back-top>
