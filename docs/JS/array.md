@@ -489,5 +489,44 @@ a.splice(0, 1, '聂晓飞');
 ```js
 // @TODO 下一篇将会整理一些关于数组中的某些业务操作
 ```
+#### 树形结构扁平化
+```js
+// 本身不带 parentKeys 数组
+const treeDataToPlanishData = (list, parent, level = 0) => {
+  return list.reduce((prev, { children = [], ...rest }) => {
+    const parentKeys = parent ? parent.concat(rest.key) : [rest.key];
+    return prev.concat({ ...rest, parentKeys, level }, treeDataToPlanishData(children, parentKeys, level + 1));
+  }, []);
+}
+
+// 字符串
+const treeDataToPlanishData = (list, parent, level = 0) => {
+  return list.reduce((prev, { children = [], ...rest }) => {
+    const parentKey = parent || '';
+    return prev.concat({ ...rest, parentKey, level }, treeDataToPlanishData(children, rest.key, level + 1));
+  }, []);
+}
+
+// 转树形
+const planishDataToTreeData = (list) => {
+  return list.reduce((prev, next, index, arr) => {
+    const tree = arr.find(item => item.key === next.parentKey);
+    if (tree) {
+      const children = tree.children || [];
+      tree.children = children.concat(next);
+      arr.splice(index, 1);
+      return prev.concat(tree);
+    } else {
+      const a = prev.concat({
+        ...next,
+        children: [],
+      });
+      return a;
+    }
+  }, []);
+}
+
+
+```
 
 <i-back-top></i-back-top>
